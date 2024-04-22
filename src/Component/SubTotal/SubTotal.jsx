@@ -1,11 +1,21 @@
 import React from 'react'
 
 import './subTotal.css'
+import { useStateValue } from '../../stateProvider'
+import { subtotal } from '../../reducer'
+
 function SubTotal() {
+        const [{basket}] = useStateValue()
+        //console.log(basket)
+        let total =0;
+        for(let i =0;i<basket.length;i++){
+            total+=basket[i].price;
+        }
+        //console.log(total)
   return (
-    <div className='subtotal'>
-        <p className='ml-2'>Subtotal(0 items)
-            <strong>0</strong>
+    <div className='subtotal '>
+        <p className='ml-2'>Subtotal({basket.length} items)
+            <strong>${total}</strong>
         </p>
         <div className='subtotal_gift '>
             <div>

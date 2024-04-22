@@ -4,7 +4,10 @@ import './header.css'
 import { FaSearch } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../../stateProvider';
 function Header() {
+    const [{basket}] = useStateValue()
+    //console.log(basket)
   return (
     <>
     <div className='header  pr-4'>
@@ -55,7 +58,7 @@ className='header_searchIcon '
             size={25}
             className='header_cart' />
             </Link>
-            <span className='header_optionLineTwo header_basket'>0</span>
+            <span className='header_optionLineTwo header_basket'>{basket.length}</span>
         </div> 
     </div>
     </div>
