@@ -28,6 +28,7 @@ className='header_searchIcon '
 
     </div>
     <div className='header_nav flex items-center'>
+      <Link to={'/login'}>
        <div className='header_option'>
             <span className='header_optionLineOne'>
                 Hello Guest
@@ -36,6 +37,7 @@ className='header_searchIcon '
                 Sign In
             </span>
         </div> 
+      </Link>
        <div className='header_option'>
        <span className='header_optionLineOne'>
                 Returns
