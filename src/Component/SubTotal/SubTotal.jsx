@@ -4,7 +4,10 @@ import './subTotal.css'
 import { useStateValue } from '../../stateProvider'
 import { subtotal } from '../../reducer'
 
+import { Link } from 'react-router-dom'
+
 function SubTotal() {
+    
         const [{basket}] = useStateValue()
         //console.log(basket)
         let total =0;
@@ -14,9 +17,12 @@ function SubTotal() {
         //console.log(total)
   return (
     <div className='subtotal '>
-        <p className='ml-2'>Subtotal({basket.length} items)
-            <strong>${total}</strong>
+        <div className='flex items-center'>
+
+        <p className='mr-2'>Subtotal({basket.length} items)
         </p>
+            <strong >{total} rs</strong>
+        </div>
         <div className='subtotal_gift '>
             <div>
                 
@@ -30,10 +36,12 @@ function SubTotal() {
                 </h1>
             </div>
         </div>
+  <div className='w-full flex justify-center mt-2 mb-2 checkout-btn'>
+        <Link to='/payment'>
+    <button>Proceed To Checkout</button>
+</Link>
+  </div>
 
-        <div className='w-full flex justify-center mt-2 mb-2 checkout-btn '>
-            <button >Proceed To Checkout</button>
-        </div>
     </div>
   )
 }

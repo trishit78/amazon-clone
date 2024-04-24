@@ -45,7 +45,7 @@ function Login() {
                 >Sign In</button>
             </form>
             <p>By signing-in you agree to the AMAZON CLONE Conditions of use & Sale.Please see our Privacy Notice, out Cookies Notice and our Interest-Based Ads Notice.</p>
-            <button className='login_registerButton'
+            <button className='login_registerButton bg-gray-200'
             onClick={register}
             >Create your amazon account</button>
         </div>

@@ -23,12 +23,10 @@ function CheckoutProduct({id,image,price,rating,title}) {
                     {title}
                 </p>
                 <p className='checkoutProduct_price'>
-                    <small>
-                        $
-                    </small>
                     <strong>
                         {price}
                     </strong>
+                    <small>{" "}rs</small>
                 </p>
                 <div className='checkoutProduct_rating flex'>
                 {

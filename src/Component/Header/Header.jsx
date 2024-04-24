@@ -28,6 +28,17 @@ className='header_searchIcon '
 
     </div>
     <div className='header_nav flex items-center'>
+    <Link to='/allproduct'>
+    <div className='header_option'>
+            <span className='header_optionLineOne'>
+                All 
+            </span>
+            <span className='header_optionLineTwo'>
+                Product
+            </span>
+        </div> 
+    </Link>
+      
       <Link to={'/login'}>
        <div className='header_option'>
             <span className='header_optionLineOne'>
